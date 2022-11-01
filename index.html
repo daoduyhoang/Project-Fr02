@@ -34,9 +34,9 @@
 		/>
 	</head>
 	<body>
-		<header id="header" class="container-fluid p-0">
+		<header id="header" class="container-fluid">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-6 align-self-center">
 					<h6 class="header__content">
 						Upto 30% off on All styles ,
 						<a
@@ -44,25 +44,25 @@
 							href="#"
 							target="_blank"
 						>
-							Click here for
+							Click Here For
 							<span class="header__content--icon"
 								><i class="fa-regular fa-thumbs-up"></i
 							></span>
 							<span class="header__content--more"
-								>More details</span
+								>More Details</span
 							>
 						</a>
 					</h6>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 align-self-center">
 					<ul class="header__list">
 						<li class="header__item">
 							<a class="header__item--link" href="#"
-								><i class="fa-solid fa-user"></i
-							></a>
+								><span> <i class="fa-solid fa-user"></i></span>
+							</a>
 						</li>
 						<li class="header__item">
-							<button class="btn btn--cart">
+							<button class="btn--cart">
 								My Cart<i class="fa-solid fa-cart-shopping"></i>
 							</button>
 						</li>
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid">
+				<div class="container-fluid p-0">
 					<a class="navbar-brand" href="#"
 						>spry<span class="navbar--orange">s</span>tore</a
 					>
@@ -92,7 +92,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div
-						class="collapse navbar-collapse"
+						class="collapse navbar-collapse justify-content-end"
 						id="navbarNavDropdown"
 					>
 						<ul class="navbar-nav">
@@ -162,17 +162,21 @@
 			</nav>
 		</header>
 		<div id="menu--sidebar">
-			<a href="#">
-				<span><i class="fa-solid fa-right-from-bracket"></i></span>
-				<span>Back</span>
+			<a class="menu--link" href="#">
+				<span class="menu--icon"
+					><i class="fa-solid fa-right-from-bracket"></i
+				></span>
+				<span class="menu--title">Back</span>
 			</a>
-			<a href="#">
-				<span></span>
-				<span>Dowload</span>
+			<hr />
+			<a class="menu--link" href="#">
+				<span><i class="fa-solid fa-download"></i></span>
+				<span class="menu--title">Dowload</span>
 			</a>
-			<a href="#">
-				<span></span>
-				<span>Buy</span>
+			<hr />
+			<a class="menu--link" href="#">
+				<span><i class="fa-solid fa-cart-shopping"></i></span>
+				<span class="menu--title">Buy</span>
 			</a>
 		</div>
 		<section id="section1" class="container-fluid">
@@ -273,6 +277,133 @@
 				</div>
 				<div class="col-lg-4 p-0 aside--right">
 					<h3 class="aside--title">MEN'S FASHION<br />50% OFF</h3>
+				</div>
+			</div>
+		</section>
+		<section id="section2" class="container-fluid">
+			<div class="container py-lg-5">
+				<h3 class="section__content">
+					Shop With<span class="section__content--orange">Us</span>
+				</h3>
+				<p class="section--description">
+					Handpicked Favourites just for you
+				</p>
+				<div class="row">
+					<div class="col-lg-2 container--card">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid1.jpg"
+								alt="grid1"
+							/>
+						</a>
+						<div class="container--product">
+							<a class="product--title" href="#">Product</a>
+						</div>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#">Hand Bags</a>
+						</h5>
+					</div>
+					<div class="col-lg-2">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid2.jpg"
+								alt="grid2"
+						/></a>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#">Watches</a>
+						</h5>
+					</div>
+					<div class="col-lg-2">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid3.jpg"
+								alt="grid3"
+						/></a>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#">Shoes</a>
+						</h5>
+					</div>
+					<div class="col-lg-2">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid4.jpg"
+								alt="grid4"
+						/></a>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#">Suits</a>
+						</h5>
+					</div>
+					<div class="col-lg-2">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid5.jpg"
+								alt="grid5"
+						/></a>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#"
+								>Accessories</a
+							>
+						</h5>
+					</div>
+					<div class="col-lg-2">
+						<a class="card--link" href=""
+							><img
+								class="card--img"
+								src="./assets/images/grid6.jpg"
+								alt="grid6"
+						/></a>
+						<h5 class="card__title">
+							<a class="card__title--link" href="#">Fragrances</a>
+						</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="section3" class="container-fluid py-5">
+			<div class="container py-lg-5">
+				<div class="row align-items-center">
+					<div class="col-lg-6 align-items-center">
+						<h3 class="section__content">
+							All Branded Men's Suits are Flat<span
+								class="section__content--orange"
+								>30% Discount</span
+							>
+						</h3>
+						<p class="section--description">
+							Visit our shop to see amazing creations from our
+							designers.
+						</p>
+						<a class="btn-default" href="#">Shop Now</a>
+					</div>
+					<div class="col-lg-6 align-item-center">
+						<img
+							class="section3--img"
+							src="./assets/images/1.jpg"
+							alt="bg4"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="section4" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-8"></div>
+				<div class="col-lg-4 section4--bgr">
+					<h3 class="section__content">
+						All Branded Men's Suits are Flat<span
+							class="section__content--orange"
+							>30% Discount</span
+						>
+					</h3>
+					<p class="section--description">
+						Visit our shop to see amazing creations from our
+						designers.
+					</p>
 				</div>
 			</div>
 		</section>

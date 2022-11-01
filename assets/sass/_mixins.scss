@@ -1,9 +1,7 @@
-// mixin => nếu không truyền vào heigth thì height=width
-// @mixin size($width, $height: $width) {
-// 	width: $width;
-// 	height: $height;
-// }
-// cách dùng: @include size(100px)
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
 
 // responsive
 @mixin maxWidth($value) {

@@ -38,10 +38,12 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    margin       : 0;
 }
 
 ul {
     list-style-type: none;
+    margin         : 0;
 }
 
 a {

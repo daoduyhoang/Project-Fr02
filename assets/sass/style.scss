@@ -5,12 +5,19 @@ body {
 	font-family: "Lato", sans-serif;
 	background-color: $textGray;
 	font-size: 16px;
-	font-weight: 600;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+
+::selection {
+	background-color: $backgroundOrange;
+	color: $textWhite;
 }
 
 #header {
 	top: 0;
 	left: 0;
+	padding: 15px 15px 0;
 	position: absolute;
 	background-color: transparent;
 	z-index: 2;
@@ -25,8 +32,9 @@ body {
 	&--link {
 		margin-left: 6px;
 		font-size: 15px;
+		font-weight: 600;
 		font-family: "Lato", sans-serif;
-		text-transform: none;
+		text-transform: capitalize;
 	}
 	&--icon {
 		margin: 0 4px;
@@ -36,6 +44,7 @@ body {
 			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 		color: $textOrange;
 		font-size: 15px;
+		text-transform: capitalize;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -43,9 +52,33 @@ body {
 }
 
 .header__list {
+	padding: 0 15px;
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	.header__item {
+		color: $textWhite;
+		&--link {
+			padding: 6px 11px;
+			display: block;
+			background-color: $backgroundGray;
+			border-radius: 100rem;
+			&:hover {
+				background-color: $backgroundOrange;
+			}
+		}
+		.btn--cart {
+			margin-left: 16px;
+			font-weight: 600;
+			padding: 6px 20px;
+			color: $textWhite;
+			background-color: $backgroundGray;
+			border-radius: 25px;
+			text-transform: capitalize;
+			&:hover {
+				background-color: $backgroundOrange;
+			}
+		}
 	}
 }
 
@@ -61,6 +94,8 @@ body {
 	}
 	.navbar--orange {
 		color: $textOrange;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	}
 }
 
@@ -69,20 +104,24 @@ body {
 	color: $textWhite;
 	font-size: 20px;
 	font-weight: 400;
-	// text-decoration: none;
 	&:hover {
 		color: $textWhite;
+	}
+	.navbar--icon {
+		margin-right: 8px;
 	}
 }
 
 .navbar-nav {
 	.nav-item {
+		margin: 0 10px;
 		&:nth-child(3) {
 			position: relative;
 		}
 		.nav-link {
 			color: $textWhite;
 			font-size: 14px;
+			font-weight: 600;
 			text-transform: uppercase;
 			&.active {
 				color: $textOrange;
@@ -95,15 +134,33 @@ body {
 }
 
 #menu--sidebar {
-	width: 100px;
-	height: 500px;
+	padding: 40px 5px;
 	background-color: #fff;
 	position: fixed;
-	top: 150px;
+	top: 120px;
 	right: 0;
 	z-index: 10;
 	background-color: $backgroundSidebarRight;
 	border-radius: 8px 0 0 8px;
+	.menu--link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $textSecondWhite;
+		opacity: 0.6;
+		margin-bottom: 20px;
+		font-weight: 400;
+		&:hover {
+			opacity: 1;
+		}
+		.menu--title {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+				Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		}
+		.menu--icon {
+			transform: rotate(180deg);
+		}
+	}
 }
 
 #section1 {
@@ -115,6 +172,7 @@ body {
 	.carousel-item {
 		.carousel--img {
 			opacity: 0.8;
+			user-select: none;
 			object-fit: cover;
 			height: $heightSection1;
 		}
@@ -164,5 +222,102 @@ body {
 		font-family: "Oswald", san-serif;
 		text-transform: uppercase;
 		transform: translate(-100%, -50%);
+	}
+}
+
+#section2 {
+	background-color: $backgroundWhite;
+	.container {
+		padding: 0 15px;
+		width: $widthContainer;
+		.section__content {
+			text-align: center;
+		}
+		.section--description {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		.card--link {
+			position: relative;
+			display: block;
+
+			.card--img {
+				object-fit: cover;
+				border-radius: 100rem;
+			}
+		}
+		.container--product {
+			top: 0;
+			left: 0;
+			z-index: 5;
+			display: block;
+			position: absolute;
+			border-radius: 100rem;
+			background-color: rgba(31, 28, 28, 0.74902);
+		}
+		.card__title {
+			margin-top: 20px;
+			color: $textBlack;
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: 600;
+			text-align: center;
+			text-transform: capitalize;
+			transition: 0.2s ease-in-out;
+			&:hover {
+				color: $textOrange;
+			}
+		}
+	}
+}
+
+.section__content {
+	margin-top: 16px;
+	color: $textBlack;
+	font-size: 40px;
+	font-weight: 700;
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	&--orange {
+		margin-left: 10px;
+		color: $textOrange;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	}
+}
+.section--description {
+	margin: 24px 0 40px;
+	color: $textGray;
+	font-weight: 400;
+}
+
+#section3 {
+	background-color: $backgroundSection3;
+	.container {
+		padding: 0 15px;
+		width: $widthContainer;
+		.section3--img {
+			object-fit: cover;
+			border-radius: 6px;
+		}
+	}
+}
+
+.btn-default {
+	display: inline-block;
+	padding: 12px 32px;
+	color: $textWhite;
+	font-weight: 600;
+	border-radius: 25px;
+	background-color: $backgroundBlack;
+	&:hover {
+		background-color: $backgroundOrange;
+	}
+}
+
+#section4 {
+	.section4--bgr {
+		background-color: $backgroundWhite;
 	}
 }
