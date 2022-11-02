@@ -3,6 +3,12 @@
 	height: $height;
 }
 
+@mixin centered {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 // responsive
 @mixin maxWidth($value) {
 	@media screen and (max-width: $value) {

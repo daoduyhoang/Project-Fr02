@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./mixins";
+// sass assets/sass/style.scss assets/css/style.css --watch
 
 body {
 	font-family: "Lato", sans-serif;
@@ -40,8 +41,7 @@ body {
 		margin: 0 4px;
 	}
 	&--more {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		font-family: $fontFamilySegoeUI;
 		color: $textOrange;
 		font-size: 15px;
 		text-transform: capitalize;
@@ -94,8 +94,7 @@ body {
 	}
 	.navbar--orange {
 		color: $textOrange;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		font-family: $fontFamilySegoeUI;
 	}
 }
 
@@ -154,8 +153,7 @@ body {
 			opacity: 1;
 		}
 		.menu--title {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-				Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+			font-family: $fontFamilySegoeUI;
 		}
 		.menu--icon {
 			transform: rotate(180deg);
@@ -215,13 +213,13 @@ body {
 	.aside--title {
 		position: absolute;
 		top: 50%;
-		right: -50%;
+		right: 0%;
 		color: $textWhite;
 		font-size: 56px;
 		font-weight: 500;
 		font-family: "Oswald", san-serif;
 		text-transform: uppercase;
-		transform: translate(-100%, -50%);
+		transform: translate(-25%, -50%);
 	}
 }
 
@@ -241,20 +239,61 @@ body {
 		.card--link {
 			position: relative;
 			display: block;
-
+			.container--product {
+				@include size(125px);
+				display: none;
+				opacity: 0;
+				position: absolute;
+				top: 12%;
+				left: 12%;
+				color: $textWhite;
+				transform: translate(-50%, -50%);
+				z-index: 3;
+				justify-content: center;
+				align-items: center;
+				transform: rotate(45deg);
+				border-radius: 100rem;
+				animation: hoverProduct 0.3s ease-in-out alternate;
+				background-color: rgba(31, 28, 28, 0.74902);
+				.product--title {
+					transform: rotate(-45deg);
+					font-size: 20px;
+					font-weight: 600;
+					font-family: "Oswald", sans-serif;
+					animation: hoverProduct 0.3s ease-in-out alternate;
+				}
+			}
+			&:hover .container--product {
+				display: flex;
+				opacity: 1;
+				color: $textOrange;
+			}
 			.card--img {
 				object-fit: cover;
 				border-radius: 100rem;
 			}
-		}
-		.container--product {
-			top: 0;
-			left: 0;
-			z-index: 5;
-			display: block;
-			position: absolute;
-			border-radius: 100rem;
-			background-color: rgba(31, 28, 28, 0.74902);
+			@keyframes hoverProduct {
+				0% {
+					clip-path: ellipse(10% 49% at 49% 50%);
+					opacity: 0.2;
+				}
+				25% {
+					clip-path: ellipse(20% 49% at 49% 50%);
+					opacity: 0.4;
+				}
+				50% {
+					clip-path: ellipse(30% 49% at 49% 50%);
+					opacity: 0.6;
+				}
+				75% {
+					clip-path: ellipse(40% 49% at 49% 50%);
+					opacity: 0.8;
+				}
+				100% {
+					clip-path: ellipse(50% 49% at 49% 50%);
+					opacity: 1;
+				}
+			}
 		}
 		.card__title {
 			margin-top: 20px;
@@ -282,8 +321,7 @@ body {
 	&--orange {
 		margin-left: 10px;
 		color: $textOrange;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		font-family: $fontFamilySegoeUI;
 	}
 }
 .section--description {
@@ -312,12 +350,152 @@ body {
 	border-radius: 25px;
 	background-color: $backgroundBlack;
 	&:hover {
+		color: $textWhite;
 		background-color: $backgroundOrange;
 	}
 }
 
 #section4 {
+	height: $heightSection4;
+	.section4__play {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: rgba(21, 19, 19, 0.43);
+			top: 0;
+			left: 0;
+			@include size(100%);
+		}
+		&--img {
+			height: $heightSection4;
+			display: block;
+			object-fit: cover;
+		}
+		&--link {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 18px 27px;
+			color: $textWhite;
+			font-size: 24px;
+			background-color: #ffffff33;
+			border-radius: 100rem;
+			&:hover {
+				background-color: $backgroundOrange;
+			}
+		}
+	}
 	.section4--bgr {
+		padding: 56px 72px;
 		background-color: $backgroundWhite;
+	}
+}
+
+#section5 {
+	background-color: $backgroundWhite;
+	padding: 48px 0;
+	.container {
+		width: $widthContainer;
+		padding: 48px 15px;
+		.section__content {
+			text-align: center;
+			margin-top: 0;
+		}
+		.section--description {
+			text-align: center;
+			margin: 0 0 48px;
+		}
+		.row {
+			margin: 0 -15px;
+			.col-lg-3 {
+				padding: 0 15px;
+				.section5__card {
+					&--link {
+						.section5__card--img {
+							display: block;
+							object-fit: cover;
+						}
+						.section5__img--hover {
+							display: none;
+							object-fit: cover;
+						}
+					}
+				}
+				.section5__content {
+					padding: 20px 10px;
+					text-align: center;
+					&--title {
+						margin-bottom: 6px;
+						.section5__content--link {
+							display: block;
+							font-size: 18px;
+							font-weight: 700;
+							color: $textBlack;
+							&:hover {
+								color: $textOrange;
+							}
+						}
+					}
+					&--price {
+						color: $textBlack;
+						font-size: 15px;
+						font-weight: 700;
+						del {
+							margin-right: 6px;
+							color: $textGray;
+							font-weight: 400;
+							font-family: $fontFamilySegoeUI;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#section6 {
+	position: relative;
+	height: $heightSection6;
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: rgba(21, 19, 19, 0.43);
+		top: 0;
+		left: 0;
+		@include size(100%);
+	}
+	.section6--img {
+		display: block;
+		width: 100%;
+		height: $heightSection6;
+		object-fit: cover;
+	}
+	.section6__container--content {
+		width: 37%;
+		position: absolute;
+		@include centered;
+		.section__content {
+			margin-top: 0;
+			color: $textWhite;
+			text-align: center;
+		}
+		.section--description {
+			color: $textWhite;
+			text-align: center;
+			margin-bottom: 36px;
+		}
+		.btn-default {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			color: $textBlack;
+			background-color: $backgroundWhite;
+			&:hover {
+				color: $textWhite;
+				background-color: $backgroundOrange;
+			}
+		}
 	}
 }
