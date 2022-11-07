@@ -1,3 +1,11 @@
-// const navItem = document.querySelectorAll(".nav-item");
-// let value = navItem[0].getAttribute("data-set");
-// navItem
+const btnTop = document.getElementById("scrollToTop");
+btnTop.addEventListener("click", () => {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+});
+window.addEventListener("scroll", (e) => {
+	if (this.scrollY >= 350) {
+		btnTop.style.display = "block";
+	} else {
+		btnTop.style.display = "none";
+	}
+});
