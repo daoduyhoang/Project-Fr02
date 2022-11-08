@@ -8,6 +8,7 @@ body {
 	font-size: 16px;
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 ::selection {
@@ -190,6 +191,7 @@ body {
 		}
 	}
 	.navbar--search {
+		position: relative;
 		margin-left: 60px;
 		color: $textWhite;
 		font-size: 20px;
@@ -219,6 +221,105 @@ body {
 					color: $textOrange;
 				}
 			}
+		}
+	}
+}
+
+.popup__cart {
+	display: none;
+	position: fixed;
+	top: 16%;
+	right: 2%;
+	width: 420px;
+	padding: 16px;
+	border: 1px solid #ddd;
+	background-color: $backgroundWhite;
+	z-index: 30;
+	border-radius: 6px;
+	&--title {
+		text-transform: uppercase;
+		color: $textBlack;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 24px;
+	}
+	&--description {
+		margin-bottom: 16px;
+		text-align: center;
+		font-weight: 500;
+		color: #f44336;
+	}
+	&--close {
+		position: absolute;
+		padding: 6px 13px;
+		top: 0;
+		right: 0;
+		color: $textBlack;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		font-size: 20px;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.popup__search {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background-color: rgba(25, 23, 23, 0.81);
+	z-index: 20;
+	&--container {
+		position: relative;
+		margin: 0 auto;
+		padding: 40px 50px;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: 700px;
+	}
+	&--form {
+		height: 50px;
+		display: flex;
+	}
+	&--input {
+		padding: 0 20px;
+		color: #555;
+		font-family: $fontFamilySegoeUI;
+		font-weight: 400;
+		width: 70%;
+		border-radius: 25px 0 0 25px;
+		border: none;
+		outline: none;
+	}
+	&--sub {
+		width: 30%;
+		border: none;
+		outline: none;
+		background-color: $backgroundOrange;
+		color: $textWhite;
+		font-weight: 700;
+		border-radius: 0 25px 25px 0;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&--close {
+		padding: 8px 16px;
+		position: absolute;
+		top: 20px;
+		right: 40px;
+		font-size: 30px;
+		color: $textWhite;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		&:hover {
+			opacity: 0.75;
 		}
 	}
 }
@@ -301,6 +402,7 @@ body {
 				}
 				.carousel--link {
 					padding: 10px 26px;
+					font-weight: 600;
 					color: $textBlack;
 					border-radius: 25px;
 					background-color: $backgroundWhite;
@@ -513,45 +615,100 @@ body {
 			margin: 0 -15px;
 			.col-lg-3 {
 				padding: 0 15px;
-				.section5__card {
-					&--link {
-						border-radius: 8px;
-						overflow: hidden;
-						display: block;
-						.section5__card--img {
-							display: block;
-							object-fit: cover;
-						}
-						.section5__img--hover {
-							display: none;
-							object-fit: cover;
-						}
+				.section5__card--container {
+					transition: all 0.3s ease 0s;
+					&:hover .section5__card .section5__card--img {
+						display: none;
+						transition: all 0.3s ease 0s;
 					}
-				}
-				.section5__content {
-					padding: 20px 10px;
-					text-align: center;
-					&--title {
-						margin-bottom: 6px;
-						.section5__content--link {
-							display: block;
-							font-size: 18px;
-							font-weight: 700;
-							color: $textBlack;
+					&:hover .section5__card .section5__img--hover,
+					&:hover .section5__card .section5__card--list,
+					&:hover .section5__card .section5__card--btnAdd {
+						display: block;
+						transition: all 0.3s ease 0s;
+					}
+					.section5__card {
+						position: relative;
+						&--list {
+							display: none;
+							transition: all 0.3s ease 0s;
+							position: absolute;
+							bottom: 50px;
+							right: 25px;
+							& > li {
+								margin-bottom: 10px;
+								& > a {
+									display: block;
+									@include size(45px);
+									color: $textBlack;
+									background-color: $backgroundWhite;
+									font-size: 17px;
+									text-align: center;
+									line-height: 45px;
+									border-radius: 100rem;
+									&:hover {
+										background-color: $backgroundOrange;
+										color: $textWhite;
+									}
+								}
+							}
+						}
+						&--btnAdd {
+							display: none;
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							padding: 10px;
+							font-weight: 600;
+							font-family: $fontFamilySegoeUI;
+							border: none;
+							outline: none;
+							width: 100%;
+							color: $textWhite;
+							background-color: $backgroundBlack;
 							&:hover {
-								color: $textOrange;
+								background-color: $backgroundOrange;
+							}
+						}
+						&--link {
+							border-radius: 8px;
+							overflow: hidden;
+							display: block;
+							.section5__card--img {
+								display: block;
+								object-fit: cover;
+							}
+							.section5__img--hover {
+								display: none;
+								object-fit: cover;
 							}
 						}
 					}
-					&--price {
-						color: $textBlack;
-						font-size: 15px;
-						font-weight: 700;
-						del {
-							margin-right: 6px;
-							color: $textGray;
-							font-weight: 400;
-							font-family: $fontFamilySegoeUI;
+					.section5__content {
+						padding: 20px 10px;
+						text-align: center;
+						&--title {
+							margin-bottom: 6px;
+							.section5__content--link {
+								display: block;
+								font-size: 18px;
+								font-weight: 700;
+								color: $textBlack;
+								&:hover {
+									color: $textOrange;
+								}
+							}
+						}
+						&--price {
+							color: $textBlack;
+							font-size: 15px;
+							font-weight: 700;
+							del {
+								margin-right: 6px;
+								color: $textGray;
+								font-weight: 400;
+								font-family: $fontFamilySegoeUI;
+							}
 						}
 					}
 				}
@@ -639,6 +796,7 @@ body {
 			.section7__caption {
 				padding: 30px;
 				background-color: $backgroundSection3;
+				border-radius: 0 0 6px 6px;
 				.section7__list {
 					display: flex;
 					padding: 0;

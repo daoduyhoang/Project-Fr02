@@ -55,7 +55,3 @@ a {
 a:hover {
     color: inherit;
 }
-
-:root {
-    --bs-offcanvas-width: 475px;
-}

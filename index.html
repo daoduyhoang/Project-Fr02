@@ -153,44 +153,6 @@
 						></span>
 						<span>Search here</span></a
 					>
-					<!-- <button
-						class="btn btn-primary"
-						type="button"
-						data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasWithBothOptions"
-						aria-controls="offcanvasWithBothOptions"
-					>
-						Enable both scrolling & backdrop
-					</button>
-
-					<div
-						class="offcanvas offcanvas-start"
-						data-bs-scroll="true"
-						tabindex="-1"
-						id="offcanvasWithBothOptions"
-						aria-labelledby="offcanvasWithBothOptionsLabel"
-					>
-						<div class="offcanvas-header">
-							<h5
-								class="offcanvas-title"
-								id="offcanvasWithBothOptionsLabel"
-							>
-								Backdrop with scrolling
-							</h5>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="offcanvas"
-								aria-label="Close"
-							></button>
-						</div>
-						<div class="offcanvas-body">
-							<p>
-								Try scrolling the rest of the page to see this
-								option in action.
-							</p>
-						</div>
-					</div> -->
 
 					<button
 						class="navbar-toggler"
@@ -273,6 +235,34 @@
 				</div>
 			</nav>
 		</header>
+		<div class="popup__cart">
+			<h5 class="popup__cart--title">Cart</h5>
+			<p class="popup__cart--description">Your shopping cart is empty</p>
+			<button class="popup__cart--close">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
+		<div class="popup__search">
+			<div class="popup__search--container">
+				<form class="popup__search--form" action="#" method="post">
+					<input
+						class="popup__search--input"
+						type="search"
+						placeholder="Keyword"
+						required
+						autofocus
+						name=""
+						id="search"
+					/>
+					<button type="submit" class="popup__search--sub">
+						Search
+					</button>
+				</form>
+			</div>
+			<button class="popup__search--close">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
 		<div id="menu--sidebar">
 			<a class="menu--link" href="#">
 				<span class="menu--icon"
@@ -562,194 +552,347 @@
 				</p>
 				<div class="row">
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-1.jpg"
-									alt="shop-1"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-11.jpg"
-									alt="shop-11"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-1.jpg"
+										alt="shop-1"
+										class="section5__card--img" />
+									<img
+										src="./assets/images/shop-11.jpg"
+										alt="shop-11"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-2.jpg"
-									alt="shop-2"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-22.jpg"
-									alt="shop-22"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-2.jpg"
+										alt="shop-2"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-22.jpg"
+										alt="shop-22"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-3.jpg"
-									alt="shop-3"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-33.jpg"
-									alt="shop-33"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-3.jpg"
+										alt="shop-3"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-33.jpg"
+										alt="shop-33"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-4.jpg"
-									alt="shop-4"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-44.jpg"
-									alt="shop-44"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-4.jpg"
+										alt="shop-4"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-44.jpg"
+										alt="shop-44"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-5.jpg"
-									alt="shop-5"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-55.jpg"
-									alt="shop-55"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-5.jpg"
+										alt="shop-5"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-55.jpg"
+										alt="shop-55"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-6.jpg"
-									alt="shop-6"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-66.jpg"
-									alt="shop-66"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-6.jpg"
+										alt="shop-6"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-66.jpg"
+										alt="shop-66"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-7.jpg"
-									alt="shop-7"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-77.jpg"
-									alt="shop-77"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-7.jpg"
+										alt="shop-7"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-77.jpg"
+										alt="shop-77"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-3 mt-4">
-						<div class="section5__card">
-							<a href="#" class="section5__card--link"
-								><img
-									src="./assets/images/shop-8.jpg"
-									alt="shop-8"
-									class="section5__card--img" /><img
-									src="./assets/images/shop-88.jpg"
-									alt="shop-88"
-									class="section5__img--hover"
-							/></a>
-						</div>
-						<div class="section5__content">
-							<h3 class="section5__content--title">
-								<a href="#" class="section5__content--link"
-									>Women Maroon Top</a
+						<div class="section5__card--container">
+							<div class="section5__card">
+								<a href="#" class="section5__card--link"
+									><img
+										src="./assets/images/shop-8.jpg"
+										alt="shop-8"
+										class="section5__card--img" /><img
+										src="./assets/images/shop-88.jpg"
+										alt="shop-88"
+										class="section5__img--hover"
+								/></a>
+								<ul class="section5__card--list">
+									<li>
+										<a href="#"
+											><i class="fa-regular fa-eye"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											><i
+												class="fa-solid fa-bag-shopping"
+											></i
+										></a>
+									</li>
+								</ul>
+								<button class="section5__card--btnAdd">
+									Add to Cart
+								</button>
+							</div>
+							<div class="section5__content">
+								<h3 class="section5__content--title">
+									<a href="#" class="section5__content--link"
+										>Women Maroon Top</a
+									>
+								</h3>
+								<span class="section5__content--price"
+									><del>$975.00</del>$899.99</span
 								>
-							</h3>
-							<span class="section5__content--price"
-								><del>$975.00</del>$899.99</span
-							>
+							</div>
 						</div>
 					</div>
 				</div>
